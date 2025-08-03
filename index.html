@@ -275,15 +275,25 @@ section, .card, .box, .achievement-card, .contact-card,{
   max-width: 900px;
   margin: auto;
 }
+.certificates-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.certificates-box {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
 
 .certificates-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  justify-content: center;
 }
 .certificates-gallery a {
   display: block;
@@ -296,7 +306,6 @@ section, .card, .box, .achievement-card, .contact-card,{
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .certificates-gallery a:hover img {
@@ -482,6 +491,8 @@ section, .card, .box, .achievement-card, .contact-card,{
   
   <section id="certificates" class="section-anchor">
   <h2>📄 Certificates</h2>
+  <div class="certificates-section">
+  <div class="certificates-box">
   <div class="certificates-gallery">
     <div class="achievement-box">
       <h3>✅ TCS iON Career Edge Certified</h3>
@@ -489,6 +500,8 @@ section, .card, .box, .achievement-card, .contact-card,{
       <img src="Shafiya_TCSION.jpeg" alt="TCSION Certificate" />
     </a>
     </div>
+  </div>
+  </div>
   </div>
 </section>
 
@@ -543,6 +556,7 @@ section, .card, .box, .achievement-card, .contact-card,{
   </script></body>
 
 </html>
+
 
 
 
