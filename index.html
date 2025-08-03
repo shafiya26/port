@@ -12,11 +12,12 @@
     }
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #c5aeda, #a6e3e9);
       color: #333;
-      overflow-x: hidden;
       font-size: 1.05rem;
+      line-height: 1.6
       
     }
 
@@ -78,7 +79,7 @@ section {
   padding: 120px 40px 60px;
   max-width: 1100px;
   margin: 0 auto;
-  scroll-margin-top: 0px;
+  scroll-margin-top: 80px;
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -112,11 +113,11 @@ h2 {
 .card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.card, .box, .achievement-card {
-  font-size: 1.05rem; /* Match body size */
+/* Apply consistent font sizes across sections */
+.card,.box,.achievement-card,.contact-card,section p,section li {
+  font-size: 1.05rem;
   line-height: 1.6;
 }
-
 .card:hover, .box:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -277,23 +278,30 @@ h2 {
 
 .certificates-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  gap: 24px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+}
+.certificates-gallery a {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .certificates-gallery a img {
   width: 100%;
-  max-width: 360px; /* Increase max width for desktop */
   height: auto;
-  aspect-ratio: 4/3; /* Optional: keeps consistent ratio */
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .certificates-gallery a:hover img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 #achievements .card {
@@ -316,18 +324,18 @@ h2 {
   max-width: 800px;
   margin: 20px auto;
 }
-.contact-card {
-  
-  margin: auto;
-  padding: 25px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  line-height: 1.8;
-  font-size: 18px;
-}
 
+/* Contact section box styling */
+.contact-section .contact-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 
 .scroll-indicator {
@@ -376,7 +384,7 @@ h2 {
  }
 
  @media (min-width: 1024px) {
-  .card, .box, .achievement-card {
+  .card, .box, .achievement-card,.contact-card,section p,section li  {
     font-size: 1.1rem;
   }
 }
@@ -534,4 +542,5 @@ h2 {
   </script></body>
 
 </html>
+
 
