@@ -112,6 +112,10 @@ h2 {
 .card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+.card, .box, .achievement-card {
+  font-size: 1.05rem; /* Match body size */
+  line-height: 1.6;
+}
 
 .card:hover, .box:hover {
   transform: translateY(-5px);
@@ -215,8 +219,8 @@ h2 {
 }
 
 .section-anchor {
-  padding-top: 70px;     /* Adjust based on navbar height */
-  margin-top: -70px;
+  padding-top: 60px;     /* Adjust based on navbar height */
+  margin-top: -60px;
 }
 
 #skills {
@@ -272,17 +276,16 @@ h2 {
 }
 
 .certificates-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  padding: 40px 10px;
-  border-radius: 10px;
 }
 
 .certificates-gallery a img {
-  width: 260px;
-  height: 180px;
+  width: 100%;
+  max-width: 360px; /* Increase max width for desktop */
+  height: auto;
+  aspect-ratio: 4/3; /* Optional: keeps consistent ratio */
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -371,6 +374,13 @@ h2 {
   margin-bottom: 100px; 
   }
  }
+
+ @media (min-width: 1024px) {
+  .card, .box, .achievement-card {
+    font-size: 1.1rem;
+  }
+}
+
  @media (max-width: 500px) {
   .certificates-gallery a img {
     width: 100%;
