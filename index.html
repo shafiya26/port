@@ -12,10 +12,10 @@
     }
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #c5aeda, #a6e3e9);
       color: #333;
-      overflow-x: hidden;
       font-size: 1.05rem;
       line-height: 1.6;
       
@@ -79,23 +79,17 @@ section {
   padding: 120px 40px 60px;
   max-width: 1100px;
   margin: 0 auto;
-  scroll-margin-top: 0px;
+  scroll-margin-top: 80px;
   animation: fadeInUp 1s ease forwards;
 }
 
 section.active {
   display: block;
 }
-section p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-/* Consistent list item styling */
+section p,
 section li {
   font-size: 1.05rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -227,8 +221,8 @@ h2 {
 }
 
 .section-anchor {
-  padding-top: 70px;     /* Adjust based on navbar height */
-  margin-top: -70px;
+  padding-top: 3px;     /* Adjust based on navbar height */
+  margin-top: -3px;
 }
 
 #skills {
@@ -287,23 +281,30 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   padding: 40px 20px;
   border-radius: 10px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
+}
+.certificates-gallery a {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .certificates-gallery a img {
   width: 100%;
-  max-width: 300px;
   height: auto;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
 }
-
+.certificates-gallery a:hover {
+  transform: scale(1.03);
+}
 .certificates-gallery a:hover img {
   transform: scale(1.05);
 }
