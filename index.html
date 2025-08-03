@@ -17,7 +17,6 @@
       color: #333;
       overflow-x: hidden;
       font-size: 1.05rem;
-      
     }
 
 .nav-scroll {
@@ -189,6 +188,34 @@ h2 {
   background: #47044d;
 }
 
+.about-box {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+}
+
+.about-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+  font-size: 1.3rem;
+}
+
 #education .skills-grid {
   display: flex;
   flex-direction: column;
@@ -196,9 +223,7 @@ h2 {
   max-width: 800px;
   margin: auto;
 }
-
-
-    
+   
   .logo-placeholder {
     font-size: 32px;
     width: 40px;
@@ -303,12 +328,25 @@ h2 {
   gap: 20px;
 }
 
-.achievement-card {
-  background: white;
+.achievement-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  text-align: center;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
+.achievement-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
 #contact .card {
   max-width: 800px;
   margin: 20px auto;
@@ -324,8 +362,6 @@ h2 {
   line-height: 1.8;
   font-size: 18px;
 }
-
-
 
 .scroll-indicator {
   position: fixed;
@@ -416,14 +452,21 @@ h2 {
       </div>
     </div>
   </section>  
-  
-  <section id="about" class="section-anchor">
+    
+  <section id="about" class="section">
     <h2>🙋‍♀️ About Me</h2>
-    <div class="card">
-      <p>I am a B.Tech student with a keen interest in technology and a passion for learning new things. I enjoy exploring software ideas, web development, and automation, and I like to take part in events that help me grow both personally and professionally. I'm always eager to gain new experiences and improve myself in every step I take.</p>
+    <div class="about-box">
+        <ul class="about-list">
+          <li>👩‍🎓 Currently pursuing B.Tech in Electronics & Communication Engineering.</li>
+          <li>🌟 UiPath Student Developer Champion 2023–24.</li>
+          <li>👩‍💻 Passionate about programming, automation, and user interface design.</li>
+          <li>🧠 Enthusiastic learner, always exploring new technologies and software.</li>
+          <li>🤝 Strong communication skills and experience in event coordination and anchoring.</li>
+          <li>🚀 Eager to learn, create, and contribute to the tech community.</li>
+        </ul>
     </div>
-  </section>  
-  
+</section>
+
   <section id="education" class="section-anchor">
     <h2>🎓 Education</h2>
     <div class="skills-grid">
@@ -438,10 +481,9 @@ h2 {
     <div class="skill-box"><div class="logo-placeholder">🐍</div><div class="skill-info"><div class="skill-title"> Python – 70%</div><div class="progress-bar"><div class="progress" style="width: 70%;"></div></div></div></div>
     <div class="skill-box"><div class="logo-placeholder">🌐</div><div class="skill-info"><div class="skill-title">HTML & CSS – 75%</div><div class="progress-bar"><div class="progress" style="width: 75%;"></div></div></div></div>
     <div class="skill-box"><div class="logo-placeholder">🧩</div><div class="skill-info"><div class="skill-title">Django – 60%</div><div class="progress-bar"><div class="progress" style="width: 60%;"></div></div></div></div>
-    <div class="skill-box"><div class="logo-placeholder">🐙</div><div class="skill-info"><div class="skill-title">Git & GitHub – 70%</div><div class="progress-bar"><div class="progress" style="width: 70%;"></div></div></div></div>
+    <div class="skill-box"><div class="logo-placeholder">🐙</div><div class="skill-info"><div class="skill-title">Git & GitHub – 65%</div><div class="progress-bar"><div class="progress" style="width: 70%;"></div></div></div></div>
     <div class="skill-box"><div class="logo-placeholder">🤖</div><div class="skill-info"><div class="skill-title">UiPath RPA – 60%</div><div class="progress-bar"><div class="progress" style="width: 60%;"></div></div></div></div>
-    <div class="skill-box"><div class="logo-placeholder">🖌️</div><div class="skill-info"><div class="skill-title">Figma – 70%</div><div class="progress-bar"><div class="progress" style="width: 70%;"></div></div></div></div>
-    <div class="skill-box"><div class="logo-placeholder">🎨</div><div class="skill-info"><div class="skill-title">Canva – 80%</div><div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></div></div>
+    <div class="skill-box"><div class="logo-placeholder">🎨</div><div class="skill-info"><div class="skill-title">Figma & Canva – 70%</div><div class="progress-bar"><div class="progress" style="width: 70%;"></div></div></div></div>
   </section>
     
 
@@ -451,13 +493,15 @@ h2 {
       <h3>📱 Mobile UI Design</h3>
       <p><strong>Tools Used:</strong> Figma</p>
       <p>Designed interactive mobile UI screens that simulate app icon interaction with transitions to profile/home pages.</p>
-      <p><a href="https://shafiya26.github.io/figmaproject/">🔗 View Project</a></p>
+      <p>Mobile Screen Interface : <a href="https://shafiya26.github.io/figmaproject/">🔗 View Project</a></p>
     </div>
     <div class="card">
       <h3>🤖 UiPath Automation Bot</h3>
       <p><strong>Tools Used:</strong> UiPath Studio</p>
       <p>Automated IMDb ratings extraction and completed RPA Challenge form-filling using selectors and data inputs.</p>
-      <p><a href="https://github.com/shafiya26/rpa-bots">🔗 View GitHub Repo</a></p>
+      <p>IMDB : <a href="https://github.com/shafiya26/UiPath-RPA-IMDB-Movie-Rating-Bot">🔗 View IMDB rating Repo</a></p>
+      <p>RPA Challenge :<a href="https://github.com/shafiya26/UiPath-RPA-Challenge">🔗 View RPA Challenge Repo</a></p>
+       
     </div>
   </section> 
   
@@ -468,7 +512,19 @@ h2 {
       <h3>✅ TCS iON Career Edge Certified</h3>
       <a href="Shafiya_TCSION.pdf" target="_blank" >
       <img src="Shafiya_TCSION.jpeg" alt="TCSION Certificate" />
-    </a>
+      </a>
+    </div>
+    <div class="achievement-box">
+      <h3>✅ VLSI Design Internship - Skilldzire</h3>
+      <a href="Shafiya_SkilldzireCertificate.pdf" target="_blank">
+        <img src="Shafiya_SkilldzireCertificate.jpeg" alt="VLSI Internship Certificate" />
+      </a>
+    </div>
+    <div class="achievement-box">
+      <h3>✅ Introduction to RPA - UiPath Academy</h3>
+      <a href="Shafiya_AutomationExplorerCertificate.pdf" target="_blank">
+        <img src="Shafiya_AutomationExplorerCertificate.jpeg" alt="UiPath RPA Certificate" />
+      </a>
     </div>
   </div>
 </section>
@@ -477,12 +533,12 @@ h2 {
   <h2>🏆 Achievements</h2>
   <div class="achievement-section">
     <div class="card">
-      <h3>🤖 UiPath Rockstar Champion</h3>
+      <h3>🤖 UiPath Student Developer Champion</h3>
       <ul class="achievement-list">
-        <li>Conducted 8+ RPA workshops for peers and juniors.</li>
-        <li>Organized the "Hack-A-Bot" automation contest with 120+ participants.</li>
-        <li>Selected among the top 10 student developers across India for UiPath DevCon Bangalore.</li>
-        <li>Chosen as one of 11 Rockstar Champions from 108 student developers nationwide.</li>
+        <li>📚 Conducted 8+ hands-on RPA workshops for peers and juniors.</li>
+        <li>🌐 Selected among top 10 students across India for UiPath DevCon in Bangalore.</li>
+        <li>💡 Organized “Hack-A-Bot” automation contest with 120+ participants..</li>
+        <li>🏅 Recognized as one of 11 Rockstar Champions out of 108 students nationwide</li>
       </ul>
     </div>
   </div>
@@ -492,8 +548,8 @@ h2 {
   <h2 class="section-title">📬 Contact</h2>
   <div class="card">
     <p><strong>📧 Email:</strong> shafiyapsk@gmail.com</p>
-    <p><strong>📱 Mobile:</strong> +91 98765 43210</p>
-    <p><strong>🚀 LinkedIn:</strong><a href="https://www.linkedin.com/in/shafiya-khathu-pathan-254995260" target="_blank"> LinkedIn Profile</a></p>
+    <p><strong>📱 Mobile:</strong> +91 8074113441</p>
+    <p><strong>🚀 LinkedIn:</strong><a href="https://www.linkedin.com/in/shafiya-khathu-pathan-254995260" target="_blank"> linkedin/shafiya</a></p>
     <p><strong>💥 GitHub:</strong><a href="https://github.com/shafiya26" target="_blank"> github.com/shafiya26</a></p>
 
   </div>
