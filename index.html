@@ -17,6 +17,7 @@
       color: #333;
       overflow-x: hidden;
       font-size: 1.05rem;
+      line-height: 1.6;
       
     }
 
@@ -84,6 +85,17 @@ section {
 
 section.active {
   display: block;
+}
+section p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Consistent list item styling */
+section li {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
@@ -276,21 +288,24 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 40px 10px;
+  padding: 40px 20px;
   border-radius: 10px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .certificates-gallery a img {
-  width: 260px;
-  height: 180px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 .certificates-gallery a:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 #achievements .card {
@@ -303,7 +318,7 @@ h2 {
   gap: 20px;
 }
 
-.achievement-card {
+.achievement-box {
   background: white;
   padding: 20px;
   border-radius: 10px;
@@ -323,6 +338,7 @@ h2 {
   text-align: center;
   line-height: 1.8;
   font-size: 18px;
+
 }
 
 
@@ -350,6 +366,11 @@ h2 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   display: none;
   z-index: 1000;
+}
+@media (min-width: 1024px) {
+  body, section p, section li {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -492,8 +513,8 @@ h2 {
   <h2 class="section-title">📬 Contact</h2>
   <div class="card">
     <p><strong>📧 Email:</strong> shafiyapsk@gmail.com</p>
-    <p><strong>📱 Mobile:</strong> +91 98765 43210</p>
-    <p><strong>🚀 LinkedIn:</strong><a href="https://www.linkedin.com/in/shafiya-khathu-pathan-254995260" target="_blank"> LinkedIn Profile</a></p>
+    <p><strong>📱 Mobile:</strong> +91 8074113441</p>
+    <p><strong>🚀 LinkedIn:</strong><a href="https://www.linkedin.com/in/shafiya-khathu-pathan-254995260" target="_blank"> linkedin.com/hafiya</a></p>
     <p><strong>💥 GitHub:</strong><a href="https://github.com/shafiya26" target="_blank"> github.com/shafiya26</a></p>
 
   </div>
