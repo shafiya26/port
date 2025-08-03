@@ -18,6 +18,29 @@
       overflow-x: hidden;
       font-size: 1.05rem;
     }
+
+    .nav-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.nav-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+@media (max-width: 768px) {
+  nav {
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+  .nav-scroll a {
+    flex: 0 0 auto;
+    font-size: 1rem;
+  }
+}
+
     nav {
   display: flex;
   justify-content: center;
@@ -289,6 +312,7 @@ h2 {
   <div class="scroll-indicator" id="scrollBar"></div>
   <div id="backToTop" class="back-to-top" onclick="scrollToTop()">↑</div>  
   <nav>
+    <div class="nav-scroll">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#education">Education</a>
@@ -297,6 +321,7 @@ h2 {
     <a href="#certificates">Certificates</a>
     <a href="#achievements">Achievements</a>
     <a href="#contact">Contact</a>
+    </div>
   </nav>  
   <section id="home">
     <div class="home-container">
@@ -431,3 +456,4 @@ h2 {
   </script></body>
 
 </html>
+
