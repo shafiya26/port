@@ -293,26 +293,28 @@ h2 {
   transform: scale(1.06);
 }
 
-
+#achievements .card {
+  max-width: 800px;
+  margin: 20px auto;
+}
 .achievement-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.achievement-box {
+.achievement-card {
   background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
-
-#contact {
-  padding: 60px 20px;
+#contact .card {
+  max-width: 800px;
+  margin: 20px auto;
 }
-
-.contact-box {
-  max-width: 500px;
+.contact-card {
+  
   margin: auto;
   padding: 25px;
   background-color: white;
@@ -474,7 +476,7 @@ h2 {
 <section id="achievements" class="section-anchor">
   <h2>🏆 Achievements</h2>
   <div class="achievement-section">
-    <div class="box">
+    <div class="card">
       <h3>🤖 UiPath Rockstar Champion</h3>
       <ul class="achievement-list">
         <li>Conducted 8+ RPA workshops for peers and juniors.</li>
@@ -488,7 +490,7 @@ h2 {
 
 <section id="contact">
   <h2 class="section-title">📬 Contact</h2>
-  <div class="contact-box">
+  <div class="card">
     <p><strong>📧 Email:</strong> shafiyapsk@gmail.com</p>
     <p><strong>📱 Mobile:</strong> +91 98765 43210</p>
     <p><strong>🚀 LinkedIn:</strong><a href="https://www.linkedin.com/in/shafiya-khathu-pathan-254995260" target="_blank"> LinkedIn Profile</a></p>
