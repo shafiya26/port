@@ -12,12 +12,11 @@
     }
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #c5aeda, #a6e3e9);
       color: #333;
+      overflow-x: hidden;
       font-size: 1.05rem;
-      line-height: 1.6;
       
     }
 
@@ -79,17 +78,12 @@ section {
   padding: 120px 40px 60px;
   max-width: 1100px;
   margin: 0 auto;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 0px;
   animation: fadeInUp 1s ease forwards;
 }
 
 section.active {
   display: block;
-}
-section p,
-section li {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
 }
 
 h2 {
@@ -221,8 +215,8 @@ h2 {
 }
 
 .section-anchor {
-  padding-top: 3px;     /* Adjust based on navbar height */
-  margin-top: -3px;
+  padding-top: 70px;     /* Adjust based on navbar height */
+  margin-top: -70px;
 }
 
 #skills {
@@ -281,32 +275,22 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
+  gap: 20px;
+  padding: 40px 10px;
   border-radius: 10px;
-  max-width: 1200px;
-  margin: auto;
-}
-.certificates-gallery a {
-  display: block;
-  width: 100%;
-  max-width: 350px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
 .certificates-gallery a img {
-  width: 100%;
-  height: auto;
+  width: 260px;
+  height: 180px;
   object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
 }
-.certificates-gallery a:hover {
-  transform: scale(1.03);
-}
+
 .certificates-gallery a:hover img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 #achievements .card {
@@ -319,7 +303,7 @@ h2 {
   gap: 20px;
 }
 
-.achievement-box {
+.achievement-card {
   background: white;
   padding: 20px;
   border-radius: 10px;
@@ -339,7 +323,6 @@ h2 {
   text-align: center;
   line-height: 1.8;
   font-size: 18px;
-
 }
 
 
@@ -367,11 +350,6 @@ h2 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   display: none;
   z-index: 1000;
-}
-@media (min-width: 1024px) {
-  body, section p, section li {
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -514,8 +492,8 @@ h2 {
   <h2 class="section-title">📬 Contact</h2>
   <div class="card">
     <p><strong>📧 Email:</strong> shafiyapsk@gmail.com</p>
-    <p><strong>📱 Mobile:</strong> +91 8074113441</p>
-    <p><strong>🚀 LinkedIn:</strong><a href="https://www.linkedin.com/in/shafiya-khathu-pathan-254995260" target="_blank"> linkedin.com/hafiya</a></p>
+    <p><strong>📱 Mobile:</strong> +91 98765 43210</p>
+    <p><strong>🚀 LinkedIn:</strong><a href="https://www.linkedin.com/in/shafiya-khathu-pathan-254995260" target="_blank"> LinkedIn Profile</a></p>
     <p><strong>💥 GitHub:</strong><a href="https://github.com/shafiya26" target="_blank"> github.com/shafiya26</a></p>
 
   </div>
@@ -546,3 +524,4 @@ h2 {
   </script></body>
 
 </html>
+
